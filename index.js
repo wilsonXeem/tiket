@@ -78,5 +78,5 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message, status, type });
 });
 
-const port = 7363
-app.listen(port || process.env.PORT, () => console.log("Server started"));
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log("Server started"));
