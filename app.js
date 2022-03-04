@@ -78,4 +78,4 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message, status, type });
 });
 
-  app.listen(8000, () => console.log("Server started"));
+  app.listen(8000||process.env.PORT, () => console.log("Server started"));
