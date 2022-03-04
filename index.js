@@ -8,7 +8,7 @@ mongoose
   .then((result) => {
     console.log("mongoose connected");
   })
-  .catch(err=>console.log("mongoose not connected", err))
+  .catch((err) => console.log("mongoose not connected", err));
 
 // Routes
 const userRoutes = require("./routes/auth");
@@ -78,4 +78,4 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message, status, type });
 });
 
-  app.listen(8000||process.env.PORT, () => console.log("Server started"));
+app.listen(9000 || process.env.PORT, () => console.log("Server started"));
